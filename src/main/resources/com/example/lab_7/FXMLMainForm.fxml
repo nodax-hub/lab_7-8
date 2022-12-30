@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0"
+            prefWidth="653.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.lab_7.mainController">
+    <center>
+        <Pane prefHeight="428.0" prefWidth="653.0" BorderPane.alignment="CENTER">
+            <AnchorPane layoutY="-37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                        minWidth="-Infinity" prefHeight="492.0" prefWidth="653.0">
+                <TableView fx:id="pointsTable" layoutX="54.0" layoutY="63.0" onKeyReleased="#selectingPointKey"
+                           onMouseReleased="#selectingPointMouse" prefHeight="300.0" prefWidth="540.0">
+                    <columns>
+                        <TableColumn fx:id="tableX" minWidth="0.0" prefWidth="255.0" text="Значение абсциссы"/>
+                        <TableColumn fx:id="tableY" minWidth="0.0" prefWidth="255.0" text="Значение ординаты"/>
+                    </columns>
+                </TableView>
+                <TextField fx:id="edX" layoutX="54.0" layoutY="400.0" prefHeight="25.0" prefWidth="185.0"
+                           promptText="Абсцисса"/>
+                <TextField fx:id="edY" layoutX="54.0" layoutY="440.0" prefHeight="25.0" prefWidth="185.0"
+                           promptText="Ордината"/>
+                <Button fx:id="addPointButton" layoutX="255.0" layoutY="410.0" mnemonicParsing="false"
+                        onAction="#addPoint" text="Добавить"/>
+                <Button fx:id="deletePointButton" layoutX="482.0" layoutY="422.0" mnemonicParsing="false"
+                        onAction="#deletePoint" prefHeight="25.0" prefWidth="70.0" text="Удалить"/>
+                <Label fx:id="selectedPoint" layoutX="84.0" layoutY="46.0" text="Выбранная точка: ?"/>
+                <Button fx:id="setPointButton" layoutX="482.0" layoutY="388.0" mnemonicParsing="false"
+                        onAction="#setPoint" text="Заменить"/>
+                <Label layoutX="54.0" layoutY="371.0" text="Координаты новой точки:"/>
+                <Label layoutX="41.0" layoutY="405.0" text="X:"/>
+                <Label layoutX="41.0" layoutY="444.0" text="Y:"/>
+            </AnchorPane>
+        </Pane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Файл">
+                <MenuItem fx:id="newDocument" mnemonicParsing="false" onAction="#showNewFunctionDialog" text="Новый"/>
+                <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#showOpenFileDialog" text="Открыть"/>
+                <MenuItem fx:id="saveDocument" mnemonicParsing="false" onAction="#saveDocumentInFile" text="Сохранить"/>
+                <MenuItem fx:id="openAndSaveDocument" mnemonicParsing="false" onAction="#showSaveAsDialog"
+                          text="Сохранить как"/>
+                <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exitApplication" text="Выйти"/>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Табуляция">
+                <MenuItem fx:id="loadDocument" mnemonicParsing="false" onAction="#showLoadFunctionDialog"
+                          text="Загрузить функцию"/>
+                <MenuItem fx:id="functionOperations" mnemonicParsing="false" onAction="#showFunctionOperationDialog"
+                          text="Операции"/>
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>

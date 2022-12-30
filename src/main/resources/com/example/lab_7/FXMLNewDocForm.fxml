@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+            prefWidth="320.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.lab_7.controllers.FunctionParametersController">
+    <children>
+        <Label layoutX="14.0" layoutY="32.0" text="Левая граница">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="73.0" text="Правая граница">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="116.0" text="Кол-во точек">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="edLeftBorder" layoutX="160.0" layoutY="30.0" text="1"/>
+        <TextField fx:id="edRightBorder" layoutX="160.0" layoutY="71.0" text="10"/>
+        <Spinner fx:id="spPointsCount" editable="true" layoutX="160.0" layoutY="114.0"/>
+        <Button fx:id="cancelButton" layoutX="14.0" layoutY="161.0" mnemonicParsing="false" onAction="#cancelPressed"
+                text="Отмена">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="okButton" layoutX="250.0" layoutY="161.0" mnemonicParsing="false" onAction="#okPressed"
+                prefHeight="30.0" prefWidth="59.0" text="OK">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
